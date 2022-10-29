@@ -8,6 +8,10 @@ Order.belongsTo(User);
 LineItem.belongsTo(Order);
 Order.hasMany(LineItem);
 LineItem.belongsTo(Product);
+Product.belongsTo(Genre);
+Genre.hasMany(Product);
+Review.belongsTo(Product);
+Product.hasMany(Review);
 
 const syncAndSeed = async()=> {
   await conn.sync({ force: true });
