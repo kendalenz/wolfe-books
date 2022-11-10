@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteReview } from '../../store';
-import StarRatingComponent from 'react-star-rating-component';
 import { FaStar } from 'react-icons/fa';
 
 const colors = {
