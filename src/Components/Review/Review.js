@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteReview } from '../../store';
+import { deleteReview, updateReview } from '../../store';
 import { FaStar } from 'react-icons/fa';
 
 const colors = {
