@@ -6,6 +6,7 @@ import CreateReview from '../Review/CreateReview';
 import AddToCart from '../Cart/AddToCart';
 import { BsArrowLeft } from 'react-icons/bs';
 import { deleteBook } from '../../store';
+import Recommendations from './Carousel';
 const Book = () => {
   const { books, auth } = useSelector((state) => state);
   const { id } = useParams();
@@ -13,6 +14,7 @@ const Book = () => {
   const navigate = useNavigate();
 
   const book = books.find((book) => book.id === id);
+  console.log(book);
 
   if (!book) return <h1>...loading</h1>;
 
@@ -51,6 +53,7 @@ const Book = () => {
         <Review id={book.id} book={book.title} />
         {auth.id ? <CreateReview id={book.id} book={book.title} /> : null}
       </div>
+      <Recommendations genre={book.genre} id={book.id} />
     </div>
   );
 };

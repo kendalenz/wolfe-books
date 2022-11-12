@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteReview } from '../../store';
 import { FaStar } from 'react-icons/fa';
 import EditReview from './EditReview';
+import dayjs from 'dayjs';
 
 const Review = (props) => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Review = (props) => {
         {getReviews.length >= 1
           ? getReviews.map((review) => {
               return (
-                <div key={review.id} id={review.id}>
+                <div key={review.id} id="reviews">
                   <h3>{review.user.username}</h3>
                   {[...Array(5)].map((_, index) => {
                     return (
@@ -38,6 +39,10 @@ const Review = (props) => {
                     );
                   })}{' '}
                   ({review.rating} stars)
+                  <p>
+                    Reviewed on{' '}
+                    {dayjs(review.createdAt).format('MMMM, D YYYY').toString()}
+                  </p>
                   <p>{review.text}</p>
                   <div id="buttons">
                     {auth.id === review.userId ? (
