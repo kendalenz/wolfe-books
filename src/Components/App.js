@@ -168,49 +168,4 @@ const App = () => {
   );
 };
 
-// return (
-//   <div>
-//     <nav>
-//       <Link to="/" className="wolfe_books">
-//         <h2>Wolfe Books</h2>
-//       </Link>
-//       <Link to="/books">Store</Link>
-//       {auth.id ? (
-//         <Link to={`/users/${auth.id}`}>Account</Link>
-//       ) : (
-//         <Link to="/login">Log in</Link>
-//       )}
-//       {auth.id ? <Link to="/cart">Cart</Link> : null}
-//       {auth.isAdmin ? <Link to="/users">All Users</Link> : null}
-//     </nav>
-//     <Routes>
-//       <Route path="/" element={<Home />} />
-//       <Route path="/books" element={<Books />} />
-//       <Route path="/books/:id" element={<Book />} />
-//       <Route path="/cart" element={<Cart />} />
-//       <Route path="/users/:id" element={<Users />} />
-//       <Route path="/users/:id/edit" element={<EditUser />} />
-//      <Route path="/createaccount" element={<CreateAccount />} />
-//       <Route path="/login" element={<Login />} />
-//       <Route path="/users" element={<AllUsers />} />
-//       {auth.isAdmin ? (
-//         <Route path="/books/:id/edit" element={<EditBook />} />
-//       ) : null}
-//     </Routes>
-//     <footer className="footer">
-//       <p>HOURS: 12-8PM DAILY</p>
-//       <p>
-//         Wolfe BOOKS
-//         <br></br>
-//         99 AVENUE A<br></br>
-//         NEW YORK, NY 10009
-//         <br></br>
-//         (646) 370-1666
-//         <br></br>
-//         INFO@WOLFEBOOKS.COM
-//       </p>
-//     </footer>
-//   </div>
-// );
-
 export default App;
